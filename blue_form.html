@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+        .container {
+            background-color: #4c46b7;
+            color: white;
+            width: 50%;
+            margin: auto;
+            border-radius: 8px;
+            
+        }
+        input, select {
+            width: 50%;
+            padding: 5px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 4px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .gender input, .hobbies input, .courses input {
+            width: auto;
+        }
+        .buttons {
+            margin-top: 15px;
+        }
+        .buttons input {
+            width: 45%;
+            padding: 10px;
+            background-color: white;
+            color: #4c46b7;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>STUDENT REGISTRATION FORM</h2>
+        <form>
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" maxlength="30">
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" maxlength="30">
+
+            <label>Date of Birth:</label>
+            <select name="day">
+                <option>Day</option>
+                <!-- Add options for days -->
+            </select>
+            <select name="month">
+                <option>Month</option>
+                <!-- Add options for months -->
+            </select>
+            <select name="year">
+                <option>Year</option>
+                <!-- Add options for years -->
+            </select>
+
+            <label for="email">Email ID:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" id="mobile" name="mobile" maxlength="10">
+
+            <label>Gender:</label>
+            <div class="gender">
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+            </div>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address">
+
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" maxlength="30">
+
+            <label for="pincode">PIN Code:</label>
+            <input type="text" id="pincode" name="pincode" maxlength="6">
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" maxlength="30">
+
+            <label>Country:</label>
+            <input type="text" value="India" disabled>
+
+            <label>Hobbies:</label>
+            <div class="hobbies">
+                <input type="checkbox" name="hobbies" value="drawing"> Drawing
+                <input type="checkbox" name="hobbies" value="singing"> Singing
+                <input type="checkbox" name="hobbies" value="dancing"> Dancing
+                <input type="checkbox" name="hobbies" value="sketching"> Sketching
+                <input type="checkbox" name="hobbies" value="others"> Others
+            </div>
+
+            <label>Qualifications:</label>
+            <table border="1" width="100%" style="background-color: white; color: black;">
+                <tr>
+                    <th>Sl. No</th>
+                    <th>Examination</th>
+                    <th>Board</th>
+                    <th>Percentage</th>
+                    <th>Year of Passing</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Class XI</td>
+                    <td><input type="text" name="board1" maxlength="10"></td>
+                    <td><input type="text" name="percentage1" maxlength="5"></td>
+                    <td><input type="text" name="year1" maxlength="4"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Class XII</td>
+                    <td><input type="text" name="board2" maxlength="10"></td>
+                    <td><input type="text" name="percentage2" maxlength="5"></td>
+                    <td><input type="text" name="year2" maxlength="4"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Graduation</td>
+                    <td><input type="text" name="board3" maxlength="10"></td>
+                    <td><input type="text" name="percentage3" maxlength="5"></td>
+                    <td><input type="text" name="year3" maxlength="4"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Masters</td>
+                    <td><input type="text" name="board4" maxlength="10"></td>
+                    <td><input type="text" name="percentage4" maxlength="5"></td>
+                    <td><input type="text" name="year4" maxlength="4"></td>
+                </tr>
+            </table>
+
+            <label>Courses Applied For:</label>
+            <div class="courses">
+                <input type="radio" name="course" value="bca"> BCA
+                <input type="radio" name="course" value="bcom"> B.Com
+                <input type="radio" name="course" value="bsc"> B.Sc
+                <input type="radio" name="course" value="ba"> B.A
+            </div>
+
+            <div class="buttons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
